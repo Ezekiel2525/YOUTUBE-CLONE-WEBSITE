@@ -1,0 +1,679 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+a {
+    color: #5a5a5a;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img {
+    cursor: pointer;
+}
+
+.flex-div {
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    justify-content: space-between;
+    padding: 10px 2%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #fff;
+}
+
+.nav-left img {
+    width: 25px;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+.nav-left .menu-icon {
+    width: 25px;
+}
+
+.nav-left .logo {
+    width: 100px;
+}
+
+.nav-right img {
+    width: 25px;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+.nav-right .user-icon {
+    width: 30px;
+    border-radius: 50%;
+}
+
+.nav-center .search-box {
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+.nav-center .search-box input {
+    width: 400px;
+    padding: 12px 2%;
+    background: transparent;
+    border: 0;
+    font-size: 14px;
+    outline: none;
+}
+
+.nav-center .search-box img {
+    padding-right: 10px;
+}
+
+.nav-center .voice-icon {
+    width: 16px; 
+}
+
+/* <!-- -------------SIDEBAR----------------------> */
+
+.sidebar {
+    width: 15%;
+    height: 100vh;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    padding-top: 60px;
+    padding-left: 2%;
+}
+
+
+.shortlinks a img {
+    width: 20px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.shortlinks a{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+   
+}
+
+.shortlinks a p{
+    font-size: 14px;
+}
+
+.shortlinks a:first-child {
+    color: red;
+}
+
+.sidebar hr {
+    width: 90%;
+    height: 2px;
+    background-color: #ccc;
+    border: 0;
+}
+
+.subscribed-list h3 {
+    color: #5a5a5a;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.sub-images a {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 15px 0;
+    
+}
+
+.sub-images a img {
+    width: 30px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.show-sidebar {
+    width: 5%;
+}
+
+.show-sidebar a p {
+    display: none;
+}
+
+.show-sidebar h3 {
+    display: none;
+}
+
+
+/* -----------MAIN CONTENT--------------- */
+
+.container {
+    padding: 20px 2% 20px 17%;
+    background-color: #fff;
+}
+
+.banner {
+    width: 100%;
+}
+
+.banner img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column-gap: 16px;
+    grid-row-gap: 30px;
+    margin-top: 20px;
+}
+
+.vid-list .thumbnail {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.vid-list  .flex-div img {
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.vid-info a {
+    display: block;
+    font-size: 16px;
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
+
+.vid-info  p{
+    font-size: 14px;
+    color: #000;
+}
+
+.show-container {
+    padding-left: 7%;
+}
+
+
+
+footer {
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    margin-top: 10rem;
+    width: 100%;
+    padding: 0.5rem 0 0 0;
+}
+
+footer p {
+    text-align: center;
+    padding: 0.2rem 0;
+    font-weight: 13px;
+    font-weight: 300;
+    color: #5a5a5a;
+}
+
+
+/* ----------------VIDEO PAGE------------------ */
+.video-container {
+    padding-left: 2%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.play-video {
+    flex-basis: 68%;
+}
+
+.right-sidebar {
+    flex-basis: 30%;
+}
+
+.play-video video {
+    width: 100%;
+}
+
+
+.sidebar-list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .4rem;
+}
+
+.sidebar-list img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.sidebar-list .small-pic {
+    flex-basis: 49%;
+}
+
+.sidebar-list .vid-info {
+    flex-basis: 49%;
+}
+
+.sidebar-list .vid-info a {
+    color: #000;
+    font-size: 16px;
+}
+
+.sidebar-list .vid-info p {
+    font-size: 14px;
+    color: #5a5a5a;
+    font-weight: 300;
+}
+
+.play-video .tags a {
+    color: #0000ff;
+}
+
+.play-video h3 {
+    font-size: 22px;
+    margin-bottom: 1rem;
+}
+
+.play-video .vid-likes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #5a5a5a;
+    margin-top: 0.8rem;
+}
+
+.play-video .vid-likes a {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 0.6rem;
+}
+
+.vid-likes div a img {
+    width: 20px;
+    margin-right: 0.7rem;
+}
+
+.play-video hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 0.8rem 0;
+}
+
+.play-video .vid-description {
+    margin: 2rem 0;
+}
+
+.vid-description .vid-tutors {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+.vid-tutors .vid-info {
+    flex: 1;
+}
+
+.vid-tutors img {
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 0.7rem;
+}
+
+.vid-tutors .vid-info a {
+    color: #000;
+    font-size: 22px;
+}
+
+.vid-tutors .vid-info span {
+    font-size: 14px;
+    color: #5a5a5a;
+    font-weight: 200;
+}
+
+.vid-tutors button {
+    padding: 0.7rem 1rem;
+    background: #ff0000;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+.vid-chan {
+    padding-left: 2.8rem;
+    margin: 2rem 0;
+}
+
+.vid-chan p {
+    /* margin: 1rem 0; */
+    font-size: 16px;
+    color: #5a5a5a;
+    font-weight: 300;
+}
+
+.vid-chan hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 0.8rem 0;
+}
+.addcomments {
+    display: flex;
+    align-items: center;
+    margin: 1.3rem 0;
+}
+
+.addcomments img {
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 0.7rem;
+}
+
+.addcomments input {
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    width: 100%;
+    padding-top: 4px;
+}
+
+.oldcomments{
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.oldcomments img {
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 0.7rem;
+}
+
+
+.oldcomments h4{
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.oldcomments h4 span {
+    font-size: 12px;
+    font-weight: 200;
+    color: #5a5a5a;
+}
+.oldcomments p {
+    font-size: 13px;
+    color: #5a5a5a;
+    font-weight: 200;
+    margin: 0.5rem 1%;
+}
+
+.oldcomments .replies{
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+    font-size: 14px;
+}
+
+.oldcomments .replies  span{
+    margin-right: 0.5rem ;
+    color: #5a5a5a;
+}
+
+.oldcomments .replies img{
+    width: 20px;
+    margin-right: 0.5rem;
+}
+
+.replies a {
+    color: #0000ff;
+    padding-left: 4px;
+}
+
+@media  screen and (max-width: 900px) {
+    .play-video {
+        flex-basis: 100%;
+    }
+
+    .right-sidebar {
+        flex-basis: 100%;
+    }
+
+    .video-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .vid-chan {
+        padding-left: 0;
+    }
+
+    .play-video .vid-likes a{
+        margin-left: 0;
+        margin-top: 1rem;
+        margin-right: 1rem;  
+    }
+
+    .replies a {
+        color: #0000ff;
+        padding-right: 4px;
+    }
+}
+
+
+
+/* -------------------- REGISTER PAGE---------------------- */
+
+.regcontainer {
+    max-width: 1000px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 17%;
+    align-items: center;
+}
+
+.register-form {
+    background: #fff;
+    box-shadow: 5px 3px 5px 5px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    max-width: 600px;
+    width: 100%;
+    border: 1px solid #ccc;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+}
+
+.register-form h2 {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.form-group {
+    margin: 2rem auto;
+    width: 100%;
+}
+
+.form-group label {
+    margin: 0.5rem auto;
+    display: block;
+    font-weight: lighter;
+    color: #5a5a5a;
+    font-size: 18px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.6rem 0.5rem;
+    border-radius: 4px;
+    outline: 0;
+    border: 1px solid #ccc;
+}
+
+.form-group select {
+   padding: 0.4rem 2rem;
+   border: 1px solid #ccc;
+   border-radius: 2px;
+   outline: 0;
+   cursor: pointer;
+}
+
+form .btn {
+    padding: 1rem 2rem;
+    width: 100%;
+    border: 0;
+    background: #ff0000;
+    outline: 0;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+    display: block;
+    text-align: center;
+}
+ 
+/* ---------LOGIN PAGE----------- */
+
+form .btnn {
+    padding: 0.5rem 2rem;
+    width: 50%;
+    border: 0;
+    background: #ff0000;
+    outline: 0;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    white-space: nowrap;
+    text-align: center;
+    margin-right: 10px;
+    border-radius: 5px;
+    margin-bottom: 10rem;
+}
+
+.fgp {
+    color: #0000ff;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------MEDIA QUERIES---------------- */
+
+@media screen and (max-width: 900px) {
+    .nav-left .menu-icon {
+        display: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .nav-right img {
+        display: none;
+    }
+
+    .nav-right .user-icon {
+        display: block;
+    }
+
+    .container, .show-container {
+        padding-left: 2%;
+        padding-right: 5%;
+    }
+
+    .nav-center .search-box input {
+        width: 100px;
+    }
+    .regcontainer {
+        width: 100%;
+        margin-left: 0; 
+    }
+
+    .register-form {
+        box-shadow: 0;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .nav-left .menu-icon {
+        display: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .nav-right img {
+        display: none;
+    }
+
+    .nav-left .logo {
+        width: 150px;
+    }
+
+    .nav-right .user-icon {
+        display: none;
+    }
+
+    .container, .show-container {
+        padding-left: 2%;
+        padding-right: 5%;
+    }
+
+    .nav-center .search-box input {
+        width: 120px;
+    }
+    .regcontainer {
+        width: 100%;
+        margin-left: 0; 
+    }
+
+    .register-form {
+        box-shadow: 0;
+    }
+}
